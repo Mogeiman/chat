@@ -1,0 +1,75 @@
+$blue: #1877F2;
+$green: #42B72A;
+$paragraph-margin-bottom: 0;
+$border-raduis: 0;
+$gray-600: rgb(245,245,245);
+
+@import "~bootstrap/scss/bootstrap";
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(203deg, 
+    #42275a 0%,
+    #734b6d 100%,
+);;
+}
+
+.user-div:hover{
+    background-color: rgb(250,250,250);
+}
+.messages-box{
+    height: 500px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.messages-box::-webkit-scrollbar{
+    display: none;
+}
+.user-image{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.message-input::placeholder{
+    color:rgba(0,0,0,0.5)
+}
+.infoText{
+    color:rgba(0,0,0,0.5);
+    text-align: center;
+    margin-bottom:0.5rem ;
+
+}
+.react-button-popover{
+    height: 30px;
+}
+.react-icon-butto{
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1rem;
+    transition: 0.25s;
+
+
+}
+.react-icon-button:hover{
+    text-decoration: none;
+    font-size: 1.7rem;
+
+}
+
+.btn:focus{
+    box-shadow: none;
+}
+.reactions-div{
+    position: absolute;
+    right:-10px;
+    bottom: -25px;
+    font-size: 0.9rem
+
+}
+.content-row{
+    display: flex;
+    flex-direction: row-reverse;
+}
