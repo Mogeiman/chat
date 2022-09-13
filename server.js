@@ -23,7 +23,7 @@ const schema = makeExecutableSchema({
 
 const wsServer = new WebSocketServer({
   server: httpServer,
-  path: '/subscriptions',
+  path: '/graphql',
 });
 const findUser = async (authToken) => {
   

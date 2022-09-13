@@ -5,9 +5,10 @@ import { createClient } from 'graphql-ws';
 import { getMainDefinition } from '@apollo/client/utilities';
 
 
+const host = window.location.host
 
 let httpLink = createHttpLink({
-  uri: '/graphql/',
+  uri: `http://${host}/graphql`,
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -25,9 +26,8 @@ const authLink = setContext((_, { headers }) => {
 
 httpLink = authLink.concat(httpLink)
 
-const host = window.location.host
 const wsLink = new GraphQLWsLink(createClient({
-  url: `ws://${host}/subscriptions/`,
+  url: `wss://${host}/subscriptions`,
   connectionParams:{
     Authorization: `Bearer ${localStorage.getItem('token')}`
   }
